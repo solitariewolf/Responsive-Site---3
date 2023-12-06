@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans'
+}
+
+html, body{
+    height: 100%;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+header{
+    width: 100%;
+    height: 90vh;
+    padding: 40px 2%;
+    /*max-height: 700px;*/
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/capa.png);
+    font-weight: 300;
+}
+
+header .logo{
+    float: left;
+    width: 160px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-image: url(../images/logo.png);
+}
+
+header nav{
+    float: right;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav li{
+    float: left;
+    padding: 0 20px;
+}
+
+header li a{
+    text-decoration: none;
+    color: white;
+}
+
+.chamada1{
+    max-width: 600px;
+    float: right;
+    margin: 140px 150px;
+}
+
+.chamada1 h2{
+    font-size: 30px;
+    color: white;
+    font-weight: normal;
+}
+
+.chamada1 p{
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+section.sessao1{
+    width: 100%;
+    background-color: #472562;
+    padding: 0px 2%;
+}
+
+.texto-sessao1{
+    float: left;
+    width: 50%;
+    color: white;
+}
+
+section.sessao1 .container{
+    max-width: 1000px;
+}
+
+.texto-sessao1 h2{
+    font-weight: 300;
+}
+
+.texto-sessao1 p{
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.texto-sessao1 ul{
+    font-size: 13px;
+    list-style-position: inside;
+}
+
+.texto-sessao1 ul li{
+    float: left;
+    width: 100%;
+}
+
+.btn1-texto{
+    background-color: #ff703d;
+    width: 165px;
+    height: 44px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 30px;
+}
+
+.device-sessao1{
+    float: left;
+    width: 50%;
+    height: 300px;
+    background-image: url(../images/device.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
