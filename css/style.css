@@ -21,6 +21,7 @@ html, body{
 header{
     width: 100%;
     height: 90vh;
+    min-height: 800px;
     padding: 40px 2%;
     /*max-height: 700px;*/
     background-size: cover;
@@ -41,16 +42,56 @@ header nav{
     float: right;
 }
 
-header nav ul{
+nav.mobile-menu{
+    cursor: pointer;
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/menu-hamburguer.png);
+    background-size: 100% 100%;
+}
+
+nav.mobile-menu:hover ul{
+    opacity: 1;
+}
+
+nav.mobile-menu ul{
+    opacity: 0;
+    transition: 1s;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav.mobile-menu ul li{
+    padding: 8px 0;
+    transition: 0.4s;
+    border-bottom: 1px solid black;
+}
+
+nav.mobile-menu ul li:hover{
+    background-color: rgb(230, 230, 230) ;
+}
+
+nav.mobile-menu ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+header nav.desktop-menu ul{
     list-style-type: none;
 }
 
-header nav li{
+header nav.desktop-menu li{
     float: left;
     padding: 0 20px;
 }
 
-header li a{
+header nav.desktop-menu li a{
     text-decoration: none;
     color: white;
 }
@@ -77,11 +118,16 @@ section.sessao1{
     width: 100%;
     background-color: #472562;
     padding: 0px 2%;
+    height: 400px;
 }
 
 .texto-sessao1{
     float: left;
     width: 50%;
+    position: relative;
+    left: 55px;
+    margin-top: 60px;
+    padding-left: 80px;
     color: white;
 }
 
@@ -90,31 +136,35 @@ section.sessao1 .container{
 }
 
 .texto-sessao1 h2{
+    font-size: 26px;
     font-weight: 300;
 }
 
 .texto-sessao1 p{
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .texto-sessao1 ul{
-    font-size: 13px;
-    list-style-position: inside;
+    font-size: 15px;
+    list-style-position: outside;
+    padding-left: 15px;
 }
 
 .texto-sessao1 ul li{
     float: left;
     width: 100%;
+    margin-top: 15px;
 }
 
 .btn1-texto{
     background-color: #ff703d;
     width: 165px;
     height: 44px;
+    font-size: 13px;
     color: white;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 16px;
     text-align: center;
     line-height: 44px;
     border-radius: 30px;
@@ -123,8 +173,109 @@ section.sessao1 .container{
 .device-sessao1{
     float: left;
     width: 50%;
-    height: 300px;
+    height: 430px;
+    position: relative;
+    top: -30px;
     background-image: url(../images/device.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 100%;
+}
+
+.sessao2{
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: white;
+    text-align: center;
+}
+
+.sessao2 .container{
+    max-width: 1000px;
+}
+
+.sessao2 h2{
+    color: #472663;
+    font-weight: 300;
+}
+
+.sessao2 p{
+    margin-top: 30px;
+    max-width: 900px;
+    display: inline-block;
+}
+
+.sessao2 img{
+    width: 100%;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 768px){
+
+    header{
+        width: 100%;
+        height: auto;
+        min-height: 90vh;
+        padding: 40px 2%;
+    }
+    nav.desktop-menu{
+        display: none;
+    }
+    nav.mobile-menu{
+        display: block;
+    }
+    section.sessao1{
+        padding:40px 2%;
+        height: auto;
+        text-align: center;
+    }
+    .chamada1{
+        max-width: none;
+        width: 100%;
+        text-align: center;
+        float: none;
+        margin: 100px 0;
+    }
+    .chamada1 h2{
+        font-weight: 300;
+        font-size: 30px;
+        padding: 0 10px;
+        color: white;
+    }
+    .chamada1 p{
+        font-size: 15px;
+        color: white;
+        margin-top: 10px;
+    }
+    .texto-sessao1{
+        width: 100%;
+        margin-top: 0;
+        padding-left: 0;
+        position: static;
+        float: none;
+        display: inline-block;
+    }
+    .texto-sessao1{
+        width: 100%;
+        margin-top: 0;
+        position: static;
+        float: none;
+        display: inline-block;
+    }
+    .texto-sessao1 ul{
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .texto-sessao1 ul li{
+        float: none;
+        text-align: left;
+    }
+    .btn1-texto{
+        display: inline-block;
+    }
+    .device-sessao1{
+        display: none;
+    }
+    .sessao2{
+        padding-top: 40px 2%;
+    }
 }
